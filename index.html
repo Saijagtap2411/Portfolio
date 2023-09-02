@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SaiJagtap - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgba(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgba(18, 24, 71, 0.998);
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style-type: none;
+            margin: 0 23px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        nav ul li a:hover {
+            color: rgba(153, 153, 226);
+            font-size: 1.02rem;
+
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 80spx 0;
+            align-items: center;
+        }
+
+        .firstSection>div {
+            width: 30%;
+
+        }
+
+        .leftSection {
+            font-size: 1.8rem;
+            margin-top: 65px;
+        }
+
+        .leftSection .buttons {
+            padding: 25px;
+        }
+
+        .leftSection .btn {
+            padding: 10px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .btn a {
+            color: white;
+            /* Set the text color of the link inside the button */
+            text-decoration: none;
+            /* Remove underline from the link */
+        }
+
+        .rightSection img {
+            width: 500px;
+
+
+        }
+
+        .rightSection {
+            margin-top: -33px;
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        #element {
+            color: blueviolet;
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+
+        .experience-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .experience-box {
+            width: 45%;
+            /* Adjust the width as needed */
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+
+        .experience-box img {
+            max-width: 91%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .experience-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .experience-box p {
+            font-size: 0.9rem;
+        }
+
+        .experience-box:hover {
+            border-color: blueviolet;
+            width: 50%;
+            /* Change border color on hover */
+        }
+
+        .next {
+            margin: 113px auto;
+            border: none;
+            border-top: 1px solid #ccc;
+            width: 90%;
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .projects-container {
+            width: 100%;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .project-box {
+            padding: 20px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s;
+        }
+
+        .project-box:hover {
+            border-color: blueviolet;
+        }
+
+        .fourthSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .details-photo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .details-info {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .details-info h3 {
+            font-size: 1.9rem;
+        }
+
+        .details-info p {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+
+        .fifthSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 25vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .contact-box {
+            text-align: center;
+        }
+
+        .contact-box img {
+            width: 77px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .contact-box p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .contact-box a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .footer {
+            background-color: rgba(18, 24, 71, 0.998);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">SaiJagtap Protfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#firstSection">Home</a></li>
+                    <li><a href="#secondSection">Experience</a></li>
+                    <li><a href="#thirdSection">Projects</a></li>
+                    <li><a href="#fourthSection">About Me</a></li>
+                    <li><a href="#fifthSection">Conatct Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection" id="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Sai Jagtap</span>
+                <div>and I am a passionate </div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><a href="https://drive.google.com/file/d/1GjVLcDRAFb_hdRYkxJRN7lqckCDXZCOz/view?usp=sharing" target="_blank">Download Resume</a></button>
+                    <button class="btn"><a href="https://github.com/Saijagtap2411" target="_blank">Visit GitHub</a></button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection" id="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <section class="experience-container">
+                <div class="experience-box">
+                    <img src="web_development.png" alt="Web Development Internship">
+                    <h3>Web Development and Designing Internship</h3>
+                    <p>It was a Web Development and Designing Internship and the duration was 3 months at PHN
+                        Technology. It was an Online Internship.</p>
+                </div>
+                <div class="experience-box">
+                    <img src="Java-Free-PNG.png" alt="Java Development Internship">
+                    <h3>Java Development Internship</h3>
+                    <p>It was a Java Development Internship and the duration was 1 month at Oasis Infobyte. It was an
+                        Online Internship.</p>
+                </div>
+            </section>
+        </section>
+        <hr class="next">
+        <section class="thirdSection" id="thirdSection">
+            <div class="projects-container">
+                <span class="text-gray">What I have done so far</span>
+                <h2 class="section-title">My Projects</h2>
+                <div class="project-grid">
+                    <div class="project-box">
+                        <h3>Women Safety App</h3>
+                        <p><strong>Duration:</strong> 3 Months</p>
+                        <p><strong>Technology Used:</strong> XML, Java</p>
+                        <p><strong>Takeaway:</strong> Expl
+                    </div>
+                    <div class="project-box">
+                        <h3>Diabetes Prediction</h3>
+                        <p><strong>Duration:</strong> 3 Months</p>
+                        <p><strong>Technology Used:</strong> HTML5, Streamlit, Python</p>
+                        <p><strong>Takeaway:</strong> Learned how to use Streamlit to enhance user experience.</p>
+                    </div>
+                    <div class="project-box">
+                        <h3>Student E-Portal</h3>
+                        <p><strong>Duration:</strong> 3 Months</p>
+                        <p><strong>Technology Used:</strong> HTML5, CSS3, JSP, Java, MySQL</p>
+                        <p><strong>Takeaway:</strong> Learned how to use MySQL with JSP and various basic concepts.</p>
+                    </div>
+                    <div class="project-box">
+                        <h3>Online Bus Ticket Booking System</h3>
+                        <p><strong>Duration:</strong> 2 Months</p>
+                        <p><strong>Technology Used:</strong> HTML5, CSS3, .NET, MySQL</p>
+                        <p><strong>Takeaway:</strong> Learned how to use MySQL with .NET and various basic concepts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="new">
+        <section class="fourthSection" id="fourthSection">
+            <div class="details-photo">
+                <img src="Programming_Customizable_Isometric_Illustrations___Amico_Style-removebg-preview.png"
+                    alt="Your Photo">
+            </div>
+            <div class="details-info">
+                <h3>About Me</h3>
+                <p><strong>Name:</strong> Sai Sunil Jagtap</p>
+                <p><strong>Mobile No:</strong> 7039412056</p>
+                <p><strong>Date of Birth:</strong> 1st February 2000</p>
+                <p><strong>Address:</strong> Navi Mumbai, Maharashtra, India</p>
+                <p><strong>Education:</strong> Master of Computer Application</p>
+            </div>
+        </section>
+        <hr>
+        <section class="fifthSection" id="fifthSection">
+            <div class="contact-container">
+                <div class="contact-box">
+                    <img src="email_logo.png" alt="Email">
+                    <p>saijagtap2411@gmail.com</p>
+                </div>
+                <div class="contact-box">
+                    <img src="linkedin_logo.png" alt="LinkedIn">
+                    <p><a href="https://www.linkedin.com/in/sai-jagtap-4472b7234/" target="_blank">LinkedIn Profile</a>
+                    </p>
+                </div>
+                <div class="contact-box">
+                    <img src="github_logo.png" alt="GitHub">
+                    <p><a href="https://github.com/Saijagtap2411" target="_blank">GitHub Profile</a></p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>&copy; Copyright SAI JAGTAP. All Rights Reserved.</p>
+        </footer>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>Web Developer</i> ', ' Software Developer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
