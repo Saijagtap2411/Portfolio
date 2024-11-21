@@ -1894,4 +1894,39 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
   }
 
- 
+
+  /* Positioning the visitor count box in the top-right corner */
+.visitor-count-box {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 16px;
+  z-index: 9999;
+}
+
+.visitor-count-box ion-icon {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+#visitor-count {
+  font-weight: bold;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .visitor-count-box {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .visitor-count-box ion-icon {
+    font-size: 16px;
+  }
+}
