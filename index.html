@@ -1274,7 +1274,13 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+           <!-- Message output -->
+  <p id="formMessage" style="margin-top: 10px;"></p>
+
+          <form  class="form" id="contactForm" data-form>
+            <input type="hidden" name="access_key" value="4f859f98-4acf-4cd1-b924-7dd44b1524f0">
+  <input type="hidden" name="subject" value="New Message from Portfolio">
+  <input type="hidden" name="from_name" value="Your Portfolio Website">
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
@@ -1290,7 +1296,36 @@
             </button>
 
           </form>
+              <script>
+  const contactForm = document.getElementById('contactForm');
+const message = document.getElementById('formMessage');
 
+contactForm.addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(contactForm);
+  message.style.color = "#ffdb70";
+
+  message.innerText = "Sending...";
+
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  });
+
+  const result = await response.json();
+
+  if (response.status === 200) {
+    message.style.color = "#ffdb70";
+    message.innerText = "Message sent successfully!";
+    contactForm.reset();
+  } else {
+    message.style.color = "#ffdb70";
+    message.innerText = "Message failed. Please try again.";
+  }
+});
+
+</script>
         </section>
 
       </article>
